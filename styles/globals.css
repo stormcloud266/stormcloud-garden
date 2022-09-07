@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@700&display=swap");
+@import url("https://rsms.me/inter/inter.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body font-light text-lg text-slate-light bg-off-white overflow-x-hidden leading-relaxed tracking-wide;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-title text-slate tracking-normal;
+  }
+
+  a {
+    @apply font-title text-slate tracking-normal underline decoration-burnt underline-offset-2 transition-colors hover:text-burnt;
+  }
+}
+
+@layer components {
+  .blog {
+    a {
+      @apply no-underline text-burnt hover:text-slate;
+    }
+
+    strong {
+      @apply font-semibold;
+    }
+    hr {
+      @apply mt-6 border-burnt/20;
+    }
+    p,
+    pre {
+      @apply mt-6;
+    }
+    ol,
+    ul {
+      @apply my-5 ml-8;
+    }
+    ul {
+      @apply list-disc;
+    }
+    ol {
+      @apply list-decimal;
+    }
+    li {
+      @apply mt-3 text-slate-light;
+    }
+    h2 {
+      @apply text-3xl md:text-4xl mt-12;
+    }
+    h3 {
+      @apply text-2xl md:text-3xl mt-10;
+    }
+    h4,
+    h5,
+    h6 {
+      @apply text-xl md:text-2xl mt-7;
+    }
+
+    blockquote {
+      @apply py-8 px-8 bg-burnt/10 mt-6 text-burnt-dark border-l-4 border-burnt/40;
+      p {
+        @apply mt-0;
+      }
+    }
+  }
+}
