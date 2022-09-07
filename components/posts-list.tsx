@@ -9,7 +9,7 @@ const PostsList = ({ posts }: PostsListProps) => {
   return (
     <div className="mt-7 flex flex-col items-start">
       {posts.map(({ slug, title }) => (
-        <Link key={slug} href={`/blog/${slug}`}>
+        <Link key={slug} href={`/posts/${slug}`}>
           <a className="mt-2 inline-block text-lg">{title}</a>
         </Link>
       ))}

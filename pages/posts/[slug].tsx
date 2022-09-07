@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from 'remark-gfm'
 
 import { PostType } from "@lib/types";
 import { getAllSlugs, getPostDataBySlug } from "@lib/utils";
@@ -30,7 +31,7 @@ const Post: NextPage<PostType> = ({ title, category, content }) => {
         <Tag>{category}</Tag>
 
         <div className="blog mt-14">
-          <ReactMarkdown components={components}>{content}</ReactMarkdown>
+          <ReactMarkdown components={components} remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
         </div>
       </div>
     </Section>
