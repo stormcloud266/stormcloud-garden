@@ -16,22 +16,21 @@ const Home: NextPage<PostsListProps> = ({ posts }) => {
   return (
     <Section>
       <Head>
-        <title>The Garden 🪴</title>
+        <title>Stormcloud&apos;s Garden</title>
       </Head>
       <div className="animate-fade">
-        <Title>The Garden 🪴</Title>
+        <Title>Stormcloud&apos;s Garden 🪴</Title>
         <div>
           <p className="mt-6">
-            This is a template for a{" "}
+            Catch me on{" "}
             <a
-              href="https://maggieappleton.com/garden-history"
+              href="https://twitter.com/stormcloud266"
               target="_blank"
               rel="noopener noreferrer"
             >
-              digital garden
-            </a>{" "}
-            or personal blog built with NextJS and Tailwind. Write about your
-            interests, thoughts, and musings in markdown.
+              Twitter
+            </a>
+            .
           </p>
         </div>
         <PostsList posts={posts} />
