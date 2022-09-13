@@ -5,7 +5,9 @@ excerpt: This post is going to outline my motivations behind starting a digital 
 category: musings
 ---
 
-I was introduced to the concept of digital gardens by [Kyle Shook](https://twitter.com/elyktrix) on Twitter.
+I was introduced to the concept of digital gardens by [Kyle Shook](https://twitter.com/elyktrix) on Twitter, and since then I've been very interested in building one of my own.
+
+Over the last few months, I've been learning so much in my new developer role that it felt like the right time to launch.
 
 ## Motivations for Planting
 
@@ -13,10 +15,10 @@ I wanted a less-formal place to write about coding and other interests, no SEO k
 
 ## Seeds I'll Be Watering
 
-- **Coding**: I'm a front-end web developer so I'll be talking a lot about coding topics such as React, CSS, and Web3.
-- **Music**: As a guitarist and huge music fan, currently-listening-to, guitar, and vinyl posts will abound.
-- **Books**: Whether it's a physical book or audiobook, I am a worm. 🪱
-- **Self-Improvement**: There will most likely be some musings about self-improvement, personal growth, etc.
+- **Coding**: many front-end and general development related topics such as React, CSS, and Web3
+- **Music**: bands/albums I'm currently listening to, guitar, and maybe pictures of vinyl
+- **Books**: physical books or audiobooks reviews
+- **Self-Improvement**: some musings about self-improvement, personal growth, etc
 
 ## What's Your ~~Sign~~ Stack
 
