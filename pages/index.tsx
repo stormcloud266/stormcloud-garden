@@ -22,6 +22,7 @@ const Home: NextPage<PostsListProps> = ({ posts }) => {
         <Title>Stormcloud&apos;s Garden 🪴</Title>
         <div>
           <p className="mt-6">
+            Musings on front-end development, music, books, and personal growth.
             Catch me on{" "}
             <a
               href="https://twitter.com/stormcloud266"
