@@ -1,7 +1,6 @@
 import { NextPage } from "next";
-import Head from "next/head";
 import ReactMarkdown from "react-markdown";
-import remarkGfm from 'remark-gfm'
+import remarkGfm from "remark-gfm";
 
 import { PostType } from "@lib/types";
 import { getAllSlugs, getPostDataBySlug } from "@lib/utils";
@@ -11,6 +10,7 @@ import Title from "@components/title";
 import Section from "@components/section";
 import HomeLink from "@components/home-link";
 import Tag from "@components/tag";
+import Seo from "@components/seo";
 
 interface PageParams {
   params: {
@@ -18,12 +18,10 @@ interface PageParams {
   };
 }
 
-const Post: NextPage<PostType> = ({ title, category, content }) => {
+const Post: NextPage<PostType> = ({ title, category, excerpt, content }) => {
   return (
     <Section tag="main">
-      <Head>
-        <title>{title}</title>
-      </Head>
+      <Seo title={title} description={excerpt} />
 
       <div className="animate-fade relative">
         <HomeLink />
@@ -31,7 +29,9 @@ const Post: NextPage<PostType> = ({ title, category, content }) => {
         <Tag>{category}</Tag>
 
         <div className="blog mt-14">
-          <ReactMarkdown components={components} remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+          <ReactMarkdown components={components} remarkPlugins={[remarkGfm]}>
+            {content}
+          </ReactMarkdown>
         </div>
       </div>
     </Section>

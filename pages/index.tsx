@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 
 import { getAllPostsFrontMatter, sortByDate } from "@lib/utils";
 import { PostsFrontMatterType } from "@lib/types";
@@ -7,6 +6,7 @@ import { PostsFrontMatterType } from "@lib/types";
 import Title from "@components/title";
 import Section from "@components/section";
 import PostsList from "@components/posts-list";
+import Seo from "@components/seo";
 
 interface PostsListProps {
   posts: PostsFrontMatterType;
@@ -15,9 +15,7 @@ interface PostsListProps {
 const Home: NextPage<PostsListProps> = ({ posts }) => {
   return (
     <Section>
-      <Head>
-        <title>Tawnee&apos;s Garden</title>
-      </Head>
+      <Seo />
       <div className="animate-fade">
         <Title>Tawnee&apos;s Garden 🪴</Title>
         <div>
