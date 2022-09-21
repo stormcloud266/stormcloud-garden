@@ -16,10 +16,10 @@ const Home: NextPage<PostsListProps> = ({ posts }) => {
   return (
     <Section>
       <Head>
-        <title>Stormcloud&apos;s Garden</title>
+        <title>Tawnee&apos;s Garden</title>
       </Head>
       <div className="animate-fade">
-        <Title>Stormcloud&apos;s Garden 🪴</Title>
+        <Title>Tawnee&apos;s Garden 🪴</Title>
         <div>
           <p className="mt-6">
             Musings on front-end development, music, books, and personal growth.
