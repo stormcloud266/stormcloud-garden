@@ -21,10 +21,10 @@ SyntaxHighlighter.registerLanguage("markdown", markdown);
 SyntaxHighlighter.registerLanguage("json", json);
 
 const components = {
-  code: ({ node, className, ...props }: CodeProps) => {
+  code: ({ node, inline, className, ...props }: CodeProps) => {
     const match = /language-(\w+)/.exec(className || "");
 
-    return match ? (
+    return !inline && match ? (
       <SyntaxHighlighter
         // @ts-ignore
         style={dark}
@@ -39,19 +39,19 @@ const components = {
         {...props}
       />
     ) : (
-      <code className={className} {...props} />
+      <code {...props} className="inline-code" />
     );
   },
-  img: ({ node, ...props }: MarkdownComponentType<"img">) => (
-    <Image
-      alt={props.alt || ""}
-      src={props.src || ""}
-      layout="responsive"
-      width={672}
-      height={354}
-      objectFit="cover"
-    />
-  ),
+  // img: ({ node, ...props }: MarkdownComponentType<"img">) => (
+  //   <Image
+  //     alt={props.alt || ""}
+  //     src={props.src || ""}
+  //     layout="responsive"
+  //     width={672}
+  //     height={354}
+  //     objectFit="cover"
+  //   />
+  // ),
   a: ({ node, ...props }: MarkdownComponentType<"a">) => {
     const externalLink = props.href?.startsWith("http");
     return externalLink ? (
