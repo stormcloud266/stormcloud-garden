@@ -42,16 +42,6 @@ const components = {
       <code {...props} className="inline-code" />
     );
   },
-  // img: ({ node, ...props }: MarkdownComponentType<"img">) => (
-  //   <Image
-  //     alt={props.alt || ""}
-  //     src={props.src || ""}
-  //     layout="responsive"
-  //     width={672}
-  //     height={354}
-  //     objectFit="cover"
-  //   />
-  // ),
   a: ({ node, ...props }: MarkdownComponentType<"a">) => {
     const externalLink = props.href?.startsWith("http");
     return externalLink ? (
